@@ -1,0 +1,20 @@
+{
+  "name": "swainwong-video-local",
+  "interface": {
+    "displayName": "SwainWong Local Plugins"
+  },
+  "plugins": [
+    {
+      "name": "swainwong-video-factory",
+      "source": {
+        "source": "local",
+        "path": "./plugins/swainwong-video-factory"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

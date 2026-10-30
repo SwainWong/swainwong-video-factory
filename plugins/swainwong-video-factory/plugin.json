@@ -1,0 +1,36 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "swainwong-video-factory",
+  "version": "0.3.10",
+  "description": "Produce, review, deliver, and continuously improve SwainWong and SwainTalk videos through one evidence-bound workflow.",
+  "author": {
+    "name": "SwainWong"
+  },
+  "keywords": [
+    "video-production",
+    "review",
+    "workflow",
+    "harness"
+  ],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "SwainWong Video Factory",
+        "shortDescription": "One-entry video production, review, and feedback workflow",
+        "longDescription": "A Codex-first video workflow with internal specialist roles, mechanical final-pixel progress and source-presence gates, hash-bound independent visual and audio review, and durable feedback handling.",
+        "developerName": "SwainWong",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "brandColor": "#102F32",
+        "defaultPrompt": [
+          "Use the SwainWong video workflow to turn my topic into a validated production brief and begin the video pipeline.",
+          "Use the SwainWong video workflow to review this rendered video and route evidence-bound revisions."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+name: Plugin tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install media validation dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install numpy opencv-python-headless
+      - name: Test plugin
+        run: python -m unittest discover -s plugins/swainwong-video-factory/tests -v
+      - name: Test animal-motion review gate
+        run: python plugins/swainwong-video-factory/skills/swainwong-video-workflow/scripts/test_animal_motion_review_gate.py

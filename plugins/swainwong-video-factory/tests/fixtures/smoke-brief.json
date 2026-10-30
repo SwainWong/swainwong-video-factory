@@ -1,0 +1,49 @@
+{
+  "brief_id": "architecture-smoke-fixture",
+  "revision": 1,
+  "brief_confirmed": true,
+  "confirmation_basis": "Automated test fixture only. This is not production approval and must not be reused for a real video.",
+  "topic": "Architecture smoke-test placeholder topic",
+  "viewpoint": "Verify workflow wiring without making editorial claims.",
+  "audience": "Plugin maintainers",
+  "purpose": "Exercise deterministic initialization and research dispatch only.",
+  "aspect_ratio": "16:9",
+  "duration": {
+    "target_seconds": 60,
+    "tolerance_before_seconds": 5,
+    "tolerance_after_seconds": 5
+  },
+  "voice": {
+    "spoken_language": "zh-CN",
+    "source": "not_selected_for_architecture_test",
+    "profile_ref": "not_selected_for_architecture_test",
+    "verification_status": "not_exercised"
+  },
+  "subtitles": {
+    "language": "zh-CN",
+    "render_authority": "openfilm-global-overlay-only"
+  },
+  "visual": {
+    "asset_policy": "raster-and-footage-only",
+    "forbidden_asset_types": [
+      "svg",
+      "code-vector",
+      "generic-vector-illustration"
+    ]
+  },
+  "platform": "architecture-test-only",
+  "delivery": {
+    "resolution": "1920x1080",
+    "scope": "state-and-task-packet-only"
+  },
+  "brand": {
+    "logo_mode": "not_exercised",
+    "visual_style": "not_exercised"
+  },
+  "a_roll": {
+    "mode": "not_exercised"
+  },
+  "budget": "No paid assets or generation; architecture test only.",
+  "cleanup_policy": "Temporary project may be removed after the automated test.",
+  "collaboration": "Single-agent architecture test; no production sub-agents dispatched."
+}

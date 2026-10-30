@@ -1,0 +1,67 @@
+{
+  "name": "SwainTalk · 印刷商业志",
+  "version": "1.4",
+  "palette": {
+    "ink": "#102F32",
+    "paper": "#F5E9D2",
+    "red": "#D94A35",
+    "gold": "#E6B85C",
+    "muted": "#A7B7AE"
+  },
+  "fonts": {
+    "title": "Noto Serif SC 800",
+    "body": "Noto Sans SC 500/700",
+    "numeral": "DM Serif Display Italic"
+  },
+  "numeral_treatment": "gold fill, cream fine keyline, red print-offset, ink depth; mask reveal; units in Sans",
+  "safe_area": {
+    "left": 80,
+    "right": 80,
+    "top": 80,
+    "subtitle_bottom": 78,
+    "source_bottom": 26,
+    "logo_bottom": 26,
+    "logo_right": 40
+  },
+  "logo": "bottom right, transparent original PNG, no background container",
+  "motion": {
+    "enter_seconds": 0.55,
+    "ease": "cubic-out",
+    "terminal_read_seconds": [
+      2,
+      3
+    ]
+  },
+  "font_files": {
+    "DMSerifDisplay-Italic.ttf": "df74c0ac387baeaeb0fe4f2324e1668e6a3ed8c09cd9796fe162c71753e19e45",
+    "NotoSerifSC[wght].ttf": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+    "NotoSansSC[wght].ttf": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
+  },
+  "progress": {
+    "position": "flush top, full width",
+    "background": "#24272bcc",
+    "timing": "actual narrative section boundaries; continuous across shots",
+    "reference_1920x1080": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 70
+    },
+    "status": "layout starting values; verify actual rendered overlap",
+    "active_background": "#d32e68d9",
+    "text_color": "#ffffff",
+    "font_size": 28,
+    "shape": "contiguous rectangular segments, zero gap and radius, 1px translucent white dividers",
+    "reference_image": "chapter-bar-reference-20261019.png",
+    "within_section_fill": true,
+    "recommended_label_characters": [
+      3,
+      8
+    ],
+    "all_chapter_label_policy": "Every chapter, including opening and ending, summarizes its actual narrated argument or core question; no generic opening/summary or numbered placeholders",
+    "segment_width": "(end-start)/total_duration",
+    "fill": "cumulative global-time linear fill from left; completed chapters remain filled; no easing, reset or whole-chapter jump",
+    "fill_width_formula": "stage_width * clamp(global_time / total_duration, 0, 1)"
+  }
+}

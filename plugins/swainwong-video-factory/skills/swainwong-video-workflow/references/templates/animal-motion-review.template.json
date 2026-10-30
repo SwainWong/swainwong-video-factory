@@ -1,0 +1,17 @@
+{
+  "schema_version": "animal-motion-review/1",
+  "artifact": {"path": "/absolute/path/final-video.mp4", "sha256": "ACTUAL_SHA256"},
+  "action": {"actor": "rabbit", "kind": "short_forward_hop", "time_range_seconds": [6.5, 10.5]},
+  "producer_ids": ["ACTUAL_PRODUCER_ID"],
+  "reviewer_id": "ACTUAL_INDEPENDENT_REVIEWER_ID",
+  "evidence": [],
+  "checks": {
+    "force_chain": {"status": "UNREVIEWED", "evidence_ids": [], "observation": ""},
+    "articulation": {"status": "UNREVIEWED", "evidence_ids": [], "observation": ""},
+    "contacts": {"status": "UNREVIEWED", "evidence_ids": [], "observation": ""},
+    "trajectory_timing": {"status": "UNREVIEWED", "evidence_ids": [], "observation": ""},
+    "normal_speed_readability": {"status": "UNREVIEWED", "evidence_ids": [], "observation": ""}
+  },
+  "issues": [],
+  "evidence_shape_example_not_evidence": {"id": "actual-watch-id", "kind": "normal_speed", "reviewer_id": "ACTUAL_INDEPENDENT_REVIEWER_ID", "observed": false, "artifact_sha256": "ACTUAL_SHA256", "time_range_seconds": [6.5, 10.5], "playback_rate": 1, "observation": "Only fill after actual watching; playback progress is not observation."}
+}

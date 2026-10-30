@@ -1,0 +1,153 @@
+{
+  "recipe_id": "D01",
+  "selection": {
+    "applies_when": "spoken chapter opening",
+    "editorial_relative_weight": 3.0,
+    "ordinary_candidate_weight": 1.0,
+    "mode": "editorial_recommendation_not_runtime_scorer",
+    "quota": null
+  },
+  "implementation": "../../assets/foreground-depth-title/title-animation.js",
+  "effects": [
+    {
+      "id": "heavy-drop",
+      "label": "沉重掉落",
+      "motion": "下落加速、冲击压缩、阻尼回弹",
+      "category": "entrance",
+      "category_zh": "进入动画",
+      "parameters": {
+        "distance": {
+          "default": 440,
+          "unit": "px",
+          "meaning": "fall height from above; no from direction API"
+        }
+      },
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "fragments",
+      "label": "碎片重组",
+      "motion": "20 个全字面三角裁片聚合，末态回原文",
+      "category": "appearance",
+      "category_zh": "出现动画",
+      "parameters": {
+        "scatter": {
+          "default": 630,
+          "unit": "px",
+          "meaning": "horizontal radial scatter coefficient; vertical/jitter/rotation remain built in"
+        }
+      },
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "spring",
+      "label": "弹性弹入",
+      "motion": "缩放过冲与阻尼转动",
+      "category": "entrance",
+      "category_zh": "进入动画",
+      "parameters": {},
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "grapheme-reveal",
+      "label": "逐字显影",
+      "motion": "原文 DOM Range 字素区域顺序显影",
+      "category": "appearance",
+      "category_zh": "出现动画",
+      "parameters": {},
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "light-wipe",
+      "label": "光幕扫入",
+      "motion": "方向感知的显影边与高光",
+      "category": "appearance",
+      "category_zh": "出现动画",
+      "parameters": {
+        "highlightColor": {
+          "default": "#fff5c3",
+          "type": "CSS color"
+        },
+        "highlightShadow": {
+          "default": "0 0 22px #ffe9a8,0 0 42px #fff9",
+          "type": "CSS text-shadow"
+        },
+        "direction": {
+          "source": "title direction/computed bidi direction",
+          "note": "not an independent cue field"
+        }
+      },
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "ink-reveal",
+      "label": "墨迹显现",
+      "motion": "错时扩张的有机墨迹遮罩",
+      "category": "appearance",
+      "category_zh": "出现动画",
+      "parameters": {},
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "side-slide",
+      "label": "侧向滑入",
+      "motion": "横向位移与倾斜、运动模糊收敛",
+      "category": "entrance",
+      "category_zh": "进入动画",
+      "parameters": {
+        "distance": {
+          "default": "typeset width * 0.58",
+          "unit": "px"
+        },
+        "from": {
+          "default": "left",
+          "values": [
+            "left",
+            "right"
+          ]
+        }
+      },
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "flip-open",
+      "label": "翻转展开",
+      "motion": "X 轴透视翻开",
+      "category": "entrance",
+      "category_zh": "进入动画",
+      "parameters": {},
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "depth-push",
+      "label": "纵深推进",
+      "motion": "Z 轴推进与聚焦",
+      "category": "entrance",
+      "category_zh": "进入动画",
+      "parameters": {},
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    },
+    {
+      "id": "blur-focus",
+      "label": "模糊聚焦",
+      "motion": "固定位置尺寸上散焦至清晰",
+      "category": "appearance",
+      "category_zh": "出现动画",
+      "parameters": {},
+      "additional_motion_controls": "only listed parameters are supported; other dynamics are built in"
+    }
+  ],
+  "interface_version": "3.15",
+  "interface_contract": "foreground-depth-title-interface.md",
+  "composition": "one cues.type per active cue; sequential cues supported; arbitrary simultaneous effect composition unsupported",
+  "cue_fields": {
+    "type": "spring by default",
+    "label": "registry label by default; optional display element only",
+    "at": "frame(t, anchor) anchor when absent; anchor defaults 0",
+    "until": "next cue or sceneDuration; sceneDuration is a hard stop",
+    "enterDuration": 0.85,
+    "duration": "legacy alias for enterDuration",
+    "exitDuration": 0.16,
+    "seed": "1997 + cueIndex * 101; deterministic random recipes only"
+  }
+}

@@ -1,0 +1,57 @@
+# This working directory also holds private video productions. Track only
+# the plugin package and the explicitly listed repository support files.
+/*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/.agents/
+/.agents/*
+!/.agents/plugins/
+/.agents/plugins/*
+!/.agents/plugins/marketplace.json
+!/.github/
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/tests.yml
+!/plugins/
+/plugins/*
+!/plugins/swainwong-video-factory/
+!/docs/
+/docs/*
+!/docs/swainwong-video-plugin-architecture.md
+!/docs/h01-depth-title-lessons-20261030.md
+
+# Never ship machine state, credentials, generated output or video media,
+# including when accidentally created inside the otherwise allowed package.
+**/__pycache__/
+*.py[cod]
+**/.DS_Store
+**/.env
+**/.env.*
+**/.venv/
+**/venv/
+**/node_modules/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.video-workflow/
+**/.feedback.lock
+**/harness/**/candidates/
+**/.film/
+**/.worktrees/
+**/exports/
+**/renders/
+**/logs/
+*.log
+*.sqlite*
+*.db
+*.pem
+*.key
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.zip
+*.tar.gz

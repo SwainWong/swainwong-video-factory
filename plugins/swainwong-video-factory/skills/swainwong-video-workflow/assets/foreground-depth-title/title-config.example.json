@@ -1,0 +1,55 @@
+{
+  "canvas": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fonts": [],
+  "global": {
+    "fontFamily": "sans-serif",
+    "fallbackFamilies": [
+      "Arial",
+      "PingFang SC",
+      "sans-serif"
+    ],
+    "fontSize": 260,
+    "fontWeight": 900,
+    "minFontSize": 96,
+    "autoFit": true,
+    "alignment": "justify",
+    "safeInsets": {
+      "left": 88,
+      "right": 88,
+      "top": 130,
+      "bottom": 200
+    },
+    "top": 205,
+    "locale": "zh-CN",
+    "direction": "auto",
+    "lineHeight": 1.2,
+    "fontStyle": "normal",
+    "color": "#ffffff",
+    "letterSpacing": 0,
+    "wordSpacing": 0,
+    "textShadow": "0 8px 0 #18232b, 0 18px 22px #00000099",
+    "textStrokeWidth": 1.5,
+    "textStrokeColor": "#18232b"
+  },
+  "scenes": {
+    "chapter": {
+      "text": "章节标题",
+      "animation": {
+        "cues": [
+          {
+            "type": "heavy-drop",
+            "at": 0.25,
+            "enterDuration": 0.7,
+            "exitDuration": 0.16,
+            "seed": 2026,
+            "until": 4.7,
+            "distance": 440
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "SwainWong视频制作流程"
+  short_description: "可编辑视频制作流程，含来源质量、最终像素、三角色独立审核与反馈闭环"
+  default_prompt: "使用 $swainwong-video-workflow，先确认制作平台、素材丰富度与时长范围，再为我的主题制作 SwainTalk 视频。"
+policy:
+  allow_implicit_invocation: true
